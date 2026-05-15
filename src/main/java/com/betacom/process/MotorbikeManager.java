@@ -10,10 +10,9 @@ public class MotorbikeManager implements Interfaces {
     public boolean execute() throws Exception {
 
         Vehicle moto = new Motorbike();
-        MotorbikeImp controllo = new MotorbikeImp();
+        MotorbikeImp test = new MotorbikeImp();
 
-        controllo.controllo(moto);
-
+        test.controllo(moto);
 
         return false;
     }

@@ -10,9 +10,6 @@ public class VehicleManager implements Interfaces {
     @Override
     public boolean execute() throws Exception {
 
-        System.out.println("** Begin  Interface **");
-
-        Map<Integer, Vehicle> veicles = new HashMap<Integer, Vehicle>();
 
 
         return false;
