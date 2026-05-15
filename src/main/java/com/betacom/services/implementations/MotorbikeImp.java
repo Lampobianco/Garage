@@ -1,4 +1,13 @@
-package com.genitaly.services.implementations;
+package com.betacom.services.implementations;
 
-public class MotorBikeImp {
+import com.betacom.models.Motorbike;
+
+public class MotorbikeImp {
+
+    public static Motorbike createMotorbike() {
+
+        return new Motorbike();
+
+    }
+
 }
