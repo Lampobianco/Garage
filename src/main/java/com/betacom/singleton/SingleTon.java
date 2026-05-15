@@ -16,7 +16,7 @@ public class SingleTon {    //per gestire l'accesso alla lista
 
     }
 
-    private SingleTon getInstance() {   //creazione singleton se non esiste
+    private static SingleTon getInstance() {   //creazione singleton se non esiste
         if(istance == null) {
             istance=new SingleTon();
         }
@@ -24,7 +24,7 @@ public class SingleTon {    //per gestire l'accesso alla lista
         return istance;
     }
 
-    public List <Vehicle> getList() { //crea lista se non esiste, la sostituisce sempre
+    public static List <Vehicle> getList() { //crea lista se non esiste, la sostituisce sempre
         if(getInstance().veicoli == null) {
             veicoli = new ArrayList <Vehicle> ();
         }

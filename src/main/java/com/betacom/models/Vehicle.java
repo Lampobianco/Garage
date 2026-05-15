@@ -3,6 +3,7 @@ package com.betacom.models;
 public abstract class Vehicle {
 
     private Integer id;                // id univoco del record
+    private String targa;
     private String vehicleType;        // macchina, moto, bici
     private Integer wheelCount;        // dipende del tipo veicolo
     private String fuelType;           // benzina, diesel, elettrica, hybrid, manual
@@ -14,7 +15,7 @@ public abstract class Vehicle {
 
     public Vehicle(){}
 
-    public Vehicle(Integer id, String vehicleType, Integer wheelCount, String fuelType, String category, String color, String brand, Integer productionYear, String model) {
+    public Vehicle(Integer id,,String targa,String vehicleType, Integer wheelCount, String fuelType, String category, String color, String brand, Integer productionYear, String model) {
         this.id = id++;
         this.vehicleType = vehicleType;
         this.wheelCount = wheelCount;
@@ -61,6 +62,8 @@ public abstract class Vehicle {
     public String getModel() {
         return model;
     }
+
+    public String getTarga() { return targa; }
 
 
     public void setId(Integer id) {
