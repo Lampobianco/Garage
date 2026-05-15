@@ -8,10 +8,10 @@ public class Motorbike extends Vehicle{
 
     public Motorbike() {}
 
-    public Motorbike(String licensePlate, Integer cc) {
-        super();
+    public Motorbike(String vehicleType, Integer wheelCount, String fuelType, String category, String color, String brand, Integer productionYear, String model, String licensePlate,Integer cc) {
+        super(vehicleType, wheelCount, fuelType, category, color, brand, productionYear, model);
         this.licensePlate = licensePlate;
-        this.cc = cc;
+        this.cc=cc;
     }
 
     public String getLicensePlate() {

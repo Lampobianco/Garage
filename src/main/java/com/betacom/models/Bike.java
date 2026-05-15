@@ -9,8 +9,8 @@ public class Bike extends Vehicle{
 
     public Bike() {}
 
-    public Bike(Integer gearCount, String brakeType, String suspensionType, Boolean foldable) {
-        super();
+    public Bike(String vehicleType, Integer wheelCount, String fuelType, String category, String color, String brand, Integer productionYear, String model, Integer gearCount, String brakeType, String suspensionType, Boolean foldable) {
+        super(vehicleType, wheelCount, fuelType, category, color, brand, productionYear, model);
         this.gearCount = gearCount;
         this.brakeType = brakeType;
         this.suspensionType = suspensionType;
