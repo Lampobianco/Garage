@@ -5,7 +5,7 @@ import com.betacom.models.Motorbike;
 
 public interface VehicleImp {
 
-    void wheelCountCheck(Vehicle v);
+    void  wheelCountCheck(Vehicle v);
     void fuelTypeCheck(Vehicle v);
     void categoryCheck(Vehicle v);
     void productionYearCheck(Vehicle v);

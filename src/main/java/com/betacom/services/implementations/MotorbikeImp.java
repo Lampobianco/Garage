@@ -2,12 +2,15 @@ package com.betacom.services.implementations;
 
 
 import com.betacom.exceptions.AcademyException;
+import com.betacom.models.Motorbike;
 import com.betacom.models.Vehicle;
 import com.betacom.singleton.SingleTon;
 
+import java.util.Calendar;
+
 public class MotorbikeImp implements VehicleImp{
 
-    private MotorbikeImp() {
+    public MotorbikeImp() {
 
     }
 
@@ -16,20 +19,21 @@ public class MotorbikeImp implements VehicleImp{
             wheelCountCheck(v);
             categoryCheck(v);
             fuelTypeCheck(v);
-            checkTarga(v);
+            productionYearCheck(v);
+            //checkTarga(v);
             SingleTon.getList().add(v);
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 
-    public void checkTarga (Vehicle v) {
+    /*public void checkTarga (Motorbike m) {
         for(Vehicle it:SingleTon.getList()) {
-            if(v.getTarga().equals(it.getTarga())) {
-                throw new AcademyException("moto: il veicolo "+v.getId()+ " ha una targa già esistente ("+v.getTarga()+")");
+            if((it instanceof  Motorbike && it.getLicensePlate().)) {
+                throw new AcademyException("moto: il veicolo "+m.getId()+ " ha una targa già esistente ("+v.getTarga()+")");
             }
         }
-    }
+    }*/
 
     @Override
     public void wheelCountCheck(Vehicle v) throws AcademyException{
@@ -54,7 +58,8 @@ public class MotorbikeImp implements VehicleImp{
 
     @Override
     public void productionYearCheck(Vehicle v) throws AcademyException{
-        if(v.getProductionYear()>2026||v.getProductionYear()<2006) {
+        int annoCorrente = Calendar.getInstance().get(Calendar.YEAR);
+        if(v.getProductionYear()>annoCorrente||v.getProductionYear()<(annoCorrente-20)) {
             throw new AcademyException("moto: il veicolo "+v.getId()+ " ha un anno di produzione sbagliato ("+v.getProductionYear()+")");
         }
     }
