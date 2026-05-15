@@ -16,7 +16,11 @@ public class MainVehicle {
         Map<String, Interfaces> m = new HashMap<String, Interfaces>();
 
         System.out.println("*** Begin Garage ***");
-        System.out.println("Inserisci un valore : ");
+        System.out.println("1. Crea un'auto");
+        System.out.println("2. Crea una moto");
+        System.out.println("3. Crea una bici");
+        System.out.println("4. Esci");
+        System.out.println("->");
         String selection = sc.nextLine();
 
         m.put("garage", new VehicleManager());
