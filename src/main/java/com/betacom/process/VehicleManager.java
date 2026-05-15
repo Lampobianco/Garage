@@ -1,4 +1,4 @@
-package com.betacom.singleton;
+package com.betacom.process;
 
 import com.betacom.models.Vehicle;
 import com.betacom.services.Interfaces;

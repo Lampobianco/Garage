@@ -1,8 +1,8 @@
 package com.betacom;
 
-import com.betacom.exeptions.AcademyExeption;
+import com.betacom.exceptions.AcademyException;
 import com.betacom.services.Interfaces;
-import com.betacom.singleton.VehicleManager;
+import com.betacom.process.VehicleManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +37,7 @@ public class MainVehicle {
 
         }else {
 
-            throw new AcademyExeption("Processo non previsto !");
+            throw new AcademyException("Processo non previsto !");
 
 
         }
