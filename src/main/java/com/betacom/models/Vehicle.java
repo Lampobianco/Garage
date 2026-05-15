@@ -5,7 +5,7 @@ public abstract class Vehicle {
     private Integer id;                // id univoco del record
     private String vehicleType;        // macchina, moto, bici
     private Integer wheelCount;        // dipende del tipo veicolo
-    private String fuelType;           // bensine, diesel, electrica, hybrid, manual
+    private String fuelType;           // benzina, diesel, elettrica, hybrid, manual
     private String category;           // strada, fuoristrada, suv, motocross... // dipende del tipo veicolo
     private String color;
     private String brand;
