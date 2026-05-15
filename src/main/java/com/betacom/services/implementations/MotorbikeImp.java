@@ -37,21 +37,21 @@ public class MotorbikeImp implements VehicleImp{
 
     @Override
     public void wheelCountCheck(Vehicle v) throws AcademyException{
-        if(v.getWheelCount()<2||v.getWheelCount()>3) {
+        if(!(v.getWheelCount()<2||v.getWheelCount()>3)) {
             throw new AcademyException("moto: il veicolo "+v.getId()+ " ha un numero sbagliato di ruote ("+v.getWheelCount()+")");
         }
     }
 
     @Override
     public void fuelTypeCheck(Vehicle v) throws AcademyException{
-        if(v.getFuelType().equals("benzina")||v.getFuelType().equals("elettrica")){
+        if(!(v.getFuelType().equals("benzina")||v.getFuelType().equals("elettrica"))){
             throw new AcademyException("moto: il veicolo "+v.getId()+ " ha un alimentazione sbagliata ("+v.getFuelType()+")");
         }
     }
 
     @Override
     public void categoryCheck(Vehicle v) throws AcademyException{
-        if(v.getCategory().equals("motocross")||v.getCategory().equals("strada")){
+        if(!(v.getCategory().equals("motocross")||v.getCategory().equals("strada"))){
             throw new AcademyException("moto: il veicolo "+v.getId()+ " è di tipo sbagliato ("+v.getCategory()+")");
         }
     }
@@ -59,7 +59,7 @@ public class MotorbikeImp implements VehicleImp{
     @Override
     public void productionYearCheck(Vehicle v) throws AcademyException{
         int annoCorrente = Calendar.getInstance().get(Calendar.YEAR);
-        if(v.getProductionYear()>annoCorrente||v.getProductionYear()<(annoCorrente-20)) {
+        if(!(v.getProductionYear()>annoCorrente||v.getProductionYear()<(annoCorrente-20))) {
             throw new AcademyException("moto: il veicolo "+v.getId()+ " ha un anno di produzione sbagliato ("+v.getProductionYear()+")");
         }
     }
