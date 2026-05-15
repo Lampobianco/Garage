@@ -1,4 +1,12 @@
 package com.betacom.process;
 
-public class CarManager {
+import com.betacom.services.Interfaces;
+
+public class CarManager implements Interfaces {
+    @Override
+    public boolean execute() throws Exception {
+
+
+        return false;
+    }
 }

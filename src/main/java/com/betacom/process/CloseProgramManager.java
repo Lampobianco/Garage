@@ -2,12 +2,11 @@ package com.betacom.process;
 
 import com.betacom.services.Interfaces;
 
-public class BikeManager implements Interfaces {
+public class CloseProgramManager implements Interfaces {
+
     @Override
     public boolean execute() throws Exception {
-
-
-
-        return false;
+        System.exit(0);
+        return true;
     }
 }

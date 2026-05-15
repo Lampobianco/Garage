@@ -1,4 +1,13 @@
 package com.betacom.process;
 
-public class MotorbikeManager {
+import com.betacom.services.Interfaces;
+
+public class MotorbikeManager implements Interfaces {
+    @Override
+    public boolean execute() throws Exception {
+
+
+
+        return false;
+    }
 }
